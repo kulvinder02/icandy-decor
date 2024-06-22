@@ -84,9 +84,12 @@ box-sizing: border-box;
 .lg-mb-10{
     margin-bottom: 40px;
 }
+.mb-4{
+    margin-bottom: 16px;
+}
 /* ----------------section class ------------ */
 .section-bg {
-  background-image: url(../images/webp/bg-image.png);
+  background-image: url(../images/webp/bg-image.webp);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -99,7 +102,7 @@ box-sizing: border-box;
 }
 
 .text-animation {
-    background: url("../images/webp/text-animation-img.png");
+    background: url("../images/webp/text-animation-img.webp");
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -139,6 +142,9 @@ box-sizing: border-box;
     .logo-img{
         width: 328px;
         height: 221px;
+    }
+    .mb-5{
+        margin-bottom: 20px;
     }
 }
 @media(max-width:991.9px){
