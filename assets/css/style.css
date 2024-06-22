@@ -40,7 +40,7 @@ box-sizing: border-box;
     color: white;
  }
  .color-grey{
-    color: #c0bcbd;
+    color: #c1bdbe;
  }
 .color-blue{
     color: #0F63DD;
@@ -73,7 +73,12 @@ box-sizing: border-box;
     padding-left: 16px;
     padding-right: 16px;
 }
-
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
 /*  ---------margin class------------- */
 .lg-mb-2{
     margin-bottom: 8px;
