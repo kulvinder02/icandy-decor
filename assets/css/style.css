@@ -200,9 +200,9 @@ box-sizing: border-box;
     height: 200px;
 }
 .bg-band{
- width: 160px;
- height: 290px;
+    right: -8%;
 }
+
 }
 @media(max-width:576px){
 
@@ -242,4 +242,10 @@ box-sizing: border-box;
    width: 50px;
 
 }
+.bg-band{
+    width: 200px;
+    right: -2%;
+    bottom: -1%;
+}
+
 }
