@@ -24,21 +24,24 @@
     <meta name="twitter:title" content="Icandy Decor - Coming Soon">
     <meta name="twitter:description" content="We are working on our brand new website and will be launching soon! Contact us at info@icandydecor.com for inquiries.">
     <meta name="twitter:image" content=".https://i.ibb.co/dKwXLdy/Screenshot-2024-06-22-150643.png">
-    
+
+      <!-- ------gsap links ----------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
-    <div class="section-bg flex justify-center px-4 relative overflow-hidden">
+    <div class="section-bg  flex justify-center px-4 relative overflow-hidden">
         <img src="./assets/images/svg/bg-radio.svg" alt="radio" class="bg-radio">
         <img src="./assets/images/svg/bg-band.svg" alt="band" class="bg-band">
       
         <img src="./assets/images/svg/sound-wave.svg" alt="wave" class="wave-box">
         <div class="flex flex-col justify-center item-center">
-            <img src="./assets/images/webp/logo.webp" class="logo-img mb-0 lg-mb-2" alt="logo">
-            <h1 class="text-animation fw-extrabold font-montserrat text-center mb-2 lg-mb-4 leading-100 text-7xl">We’re Coming Soon</h1>
-            <p class="color-grey text-lg fw-regular leading-150 font-open-sans w-full sm-w-70 mb-5 lg-mb-10 text-center">Currently we are working on our brand new website and will be launching soon!</p>
-            <p class="color-white leading-150 fw-semibold text-lg font-montserrat text-center mb-4">For Inquiries Please Contact Us <br> <a href="mailto:info@icandydecor.com" class="color-blue">info@icandydecor.com</a></p>
-            <div class="flex item-center gap-4">
+            <img src="./assets/images/webp/logo.webp" class="logo-img mb-0 lg-mb-2 hero_content" alt="logo">
+            <h1 class="text-animation fw-extrabold font-montserrat text-center mb-2 lg-mb-4 leading-100 text-7xl hero_content">We’re Coming Soon</h1>
+            <p class="color-grey text-lg fw-regular leading-150 font-open-sans w-full sm-w-70 mb-5 lg-mb-10 hero_content text-center">Currently we are working on our brand new website and will be launching soon!</p>
+            <p class="color-white leading-150 fw-semibold text-lg font-montserrat text-center mb-4 hero_content">For Inquiries Please Contact Us <br> <a href="mailto:info@icandydecor.com" class="color-blue">info@icandydecor.com</a></p>
+            <div class="flex item-center gap-4 hero_content">
                 <a href="https://www.facebook.com/" class="social-media"><img src="./assets/images/svg/facebook-icon.svg" alt="facebook icon"></a>
                 <a href="https://x.com/i/flow/login" class="social-media"><img src="./assets/images/svg/twitter-icon.svg" alt="twitter icon"></a>
                 <a href="https://www.linkedin.com/" class="social-media"><img src="./assets/images/svg/linkdin-icon.svg" alt="linkdin icon"></a>
@@ -46,5 +49,38 @@
             </div>
         </div>
     </div>
+  
+
+
+    <!-- gsap script -->
+    <script>
+     
+      gsap.registerPlugin(ScrollTrigger);
+      const heroText = window.matchMedia("(min-width: 992px)");
+
+      const animationProps = heroText.matches ? { y: 200 } : { y: 100 };
+
+      gsap.fromTo(
+        ".hero_content",
+        {
+          opacity: 0,
+          y: animationProps.y,
+          rotate: 5,
+        },
+        {
+          duration: 0.9,
+          opacity: 1,
+          stagger: 0.8,
+          y: 0,
+          rotate: 0,
+          ease: "back.out",
+        }
+      );
+
+      if (!heroText.matches) {
+        window.addEventListener("resize", () => ScrollTrigger.refresh());
+      }
+    
+    </script>
 </body>
 </html>

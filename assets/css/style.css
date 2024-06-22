@@ -90,12 +90,12 @@ box-sizing: border-box;
 }
 /* ----------------section class ------------ */
 .section-bg {
+  background: #8058B3;
   background-image: url(../images/webp/bg-image.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 810px;
-  width: 100%;
+  min-height: 100vh;
 }
 
 .logo-img{
