@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+.font-montserrat {
+  font-family: "Montserrat";
+}
+.font-open-sans {
+  font-family: "Open Sans";
+}
+
+/* ---------  root ------------- */
+
+/* font-size */
+.text-7xl{
+    font-size: 72px;
+}
+.text-lg{
+    font-size: 20px;
+}
+/* font-weight */
+.fw-extrabold{
+   font-weight: 800;
+}
+.fw-regular{
+    font-weight: 400;
+ }
+ .fw-semibold{
+    font-weight: 600;
+ }
+ /* line height */
+ .leading-150{
+    line-height: 150%;
+ }
+
+ /* colors */
+ .color-white{
+    color: white;
+ }
+ .color-grey{
+    color: #c0bcbd;
+ }
+.color-blue{
+    color: #0F63DD;
+}
+
+
+/* -------------------  common classes  --------------  */
+.flex{
+    display: flex;
+}
+.flex-col{
+    flex-direction: column;
+}
+.justify-center{
+    justify-content: center;
+}
+.item-center{
+  align-items: center;
+}
+.text-center{
+     text-align: center;
+}
+.sm-w-75{
+    max-width: 75%;
+}
+.gap-4{
+    gap: 16px !important;
+}
+.px-4{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/*  ---------margin class------------- */
+.lg-mb-2{
+    margin-bottom: 8px;
+}
+.lg-mb-4{
+    margin-bottom: 16px;
+}
+.lg-mb-10{
+    margin-bottom: 40px;
+}
+/* ----------------section class ------------ */
+.section-bg {
+  background-image: url(../images/webp/bg-image.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.logo-img{
+    width: 368px;
+    height: 261px;
+}
+
+.text-animation {
+    background: url("../images/webp/text-animation-img.png");
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: cover;
+    background-position: 200% 200%;
+    display: inline-block;
+    animation: swim-gradient 10s linear infinite;
+}
+@keyframes swim-gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+   
+    100% {
+        background-position: 50% 50%;
+    }
+}
+.social-media{
+    transition: all 200ms ease-in-out;
+}
+.social-media:hover{
+   
+    transform: translateY(-15%);
+}
+
+
+/* media query */
+@media(max-width:1200px){
+
+    /* ---------  root ------------- */
+/* font-size */
+.text-7xl{
+    font-size: 62px;
+}
+
+    .logo-img{
+        width: 328px;
+        height: 221px;
+    }
+}
+@media(max-width:991.9px){
+
+    /* ---------  root ------------- */
+/* font-size */
+.text-7xl{
+    font-size: 52px;
+}
+
+    .logo-img{
+        width: 328px;
+        height: 221px;
+    }
+.mb-0{
+    margin-bottom: 0;
+}
+.mb-4{
+    margin-bottom: 16px;
+}
+.mb-2{
+    margin-bottom: 8px;
+}
+}
+@media(max-width:576px){
+
+    /* ---------  root ------------- */
+/* font-size */
+.text-7xl{
+    font-size: 46px;
+}
+    .logo-img{
+        width: 228px;
+        height: 160px;
+    }
+    .leading-100{
+        line-height: 100%;
+    }
+    .text-lg{
+        font-size: 18px;
+    }
+.mb-0{
+    margin-bottom: 0;
+}
+.mb-4{
+    margin-bottom: 16px;
+}
+.mb-2{
+    margin-bottom: 8px;
+}
+.w-full{
+    max-width: 100%;
+}
+}
